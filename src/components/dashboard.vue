@@ -200,7 +200,7 @@
             <div class=footer>
                 <p>16 results</p>
                 <div class="page">
-                    <button>Previous<button>
+                    <button>Previous</button>
                     <button>Next</button>
                 </div>
             </div>
@@ -216,3 +216,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+</style>
