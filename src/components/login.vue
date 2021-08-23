@@ -2,7 +2,7 @@
  <div class="login">
    <h3>Stripe</h3>
    <form class="form">
-     <h3>Sign in to your account</h3>
+     <h4>Sign in to your account</h4>
      <label>Email</label>
      <input type="text" placeholder="jane.doe@gmail.com" />
      <div class="password">
@@ -13,10 +13,10 @@
      <div class="stay-tuned">
        <input type="checkbox" class="checkbox"><p>Stay signed in for a week</p>
      </div> 
-     <button class="continue">Continue</button>
+     <button class="continue"><router-link to="/dashboard" class="link">Continue</router-link></button>
      <p class="sso">Use single sign-on(SSO) instead</p>
    </form>
-   <p>Don't have an account? <span>Sign up</span></p>
+   <p class="sign-up">Don't have an account? <span>Sign up</span></p>
    <footer>
      <ul>
        <li>&#169; Stripe</li>
@@ -42,6 +42,9 @@ export default {
   background: F7FAFC;
   margin: 3% 0 0 30%;
 }
+h3{
+  margin-left: 3%;
+}
 .form{
   background:#fff;
   border-radius: 5px;
@@ -51,7 +54,7 @@ export default {
 }
 
 input{
-  width: 90%;
+  width: 100%;
   height: 4vh;
   margin-top: 2%;
   border: 1px solid #d9dce1;
@@ -62,10 +65,14 @@ input::placeholder{
 }
 .password{
   margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
 }
-router-link{
-  margin-left: 40%;
-  color: #635cff;
+a{
+  text-decoration: none;
+}
+.link{
+  color:#fff;
 }
 .stay-tuned{
   margin-top: 5%;
@@ -81,7 +88,7 @@ router-link{
   color: #fff;
   border: none;
   border-radius: 5px;
-  width: 92%;
+  width: 100%;
   height: 6vh;
 }
 .sso{
@@ -92,8 +99,12 @@ router-link{
 span{
   color:#635cff;
 }
+.sign-up{
+  margin-left: 3%;
+}
 ul{
   display: flex;
+  list-style-type: none;
   margin-left: -5%;
 }
 li{
